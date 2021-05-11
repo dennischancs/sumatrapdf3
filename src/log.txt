@@ -1,0 +1,193 @@
+A daily log of changes and commentary. An experiment of sorts.
+
+2021-01-02 Sat
+
+more work on MinHook.[h|cpp] and MemLeakDetect.[h|cpp]
+
+2021-01-01 Fri
+
+start on MinHook.[h|cpp] to be used for mem leak detection
+
+2020-08-17 Mon
+
+fix https://github.com/sumatrapdfreader/sumatrapdf/issues/1733
+
+handle click in favorites tree (fixes #1733)
+
+2020-08-16 Sun
+
+fix https://github.com/sumatrapdfreader/sumatrapdf/issues/1716
+
+change TabState::filePath to char*
+
+disable creation of annotation that cannot be fully edited
+
+
+2020-08-15 Sat
+
+fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/1730
+
+annotations: don't change page position when annotation is created
+
+updated mupdf to latest version
+
+2020-07-26 Sun
+
+Started on converting tab code into TabCtrl.
+Luckily can do it step-by-step.
+
+refactoring old code. Changed some settings from wstr to str.
+change DisplayMode to enum class.
+
+2020-07-25 Sat
+
+fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/1286
+'i' would show page number only temporarily (persistently with SHIFT)
+and only in full screen.
+Make it work always and toggle the info.
+It could be improved (no close button, don't dismiss with ESC like
+other notification windows, no flickering of notification window).
+
+fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/1711
+(and https://github.com/sumatrapdfreader/sumatrapdf/issues/1454 most likely).
+When the cache of rendered pages is full, we free a page. If we happened to
+free a page from the document in the current tab, it would lead to free / re-rerender
+cycle and flickering.
+The fix is to make sure we only free from other tabs.
+Not perfect (if it's a visible tab in a different window, we'll probably flicker).
+The right approach would be to make the cache expand in FreeIfFull()
+if we can't find invisible page to drop (e.g. by using linked list
+to store cache entries or by having e.g. 256 over-flow entries).
+
+fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/1712
+Lots of debugging but the root cause was simple: notifications window
+is a child of canvas window. it was flickering because a paint of
+canvas would paint over notification window.
+Fixed by telling canvas window to clip children.
+We should make it more flexible and more efficient to add stuff to be
+drawn on canvas.
+
+2020-07-10 Fri
+
+handle pdf_annot_author() throwing (fixes #1673)
+
+don't crash when trying to restore deleted file (fixes #1674)
+it was a regression from the fix for saving preferences.
+probably not the best fix, should fix the fact that prefs::Save()
+deletes gGlobalPrefs->sessionData while 're iterating on it
+
+limit which annotations can be moved
+
+refactor dragging logic a bit
+
+make ESC cancel dragging of an annotation
+
+show rect of selected annotation in annotation editor
+
+2020-07-09 Thu
+
+fix regression of not copying rectangular selection as image (fixes #1668)
+
+write DisplayModel::GetAnnotationAtPos(Point) and EngineGetAnnotationAtPos(Engine, Point)
+
+update annotation rect after it's moved
+
+2020-07-08 Wed
+
+Parallelized doit -clang-format. Go concurrency is a joy.
+
+implement EnginePdfHasUnsavedAnnotations() and bug-fix detection
+of when to show 'Save PDF' button in annotations editor.
+
+update mupdf.
+this was a big one because mupdf switched to using gumbo
+as html/xml parser.
+
+tweak premake definitions
+
+ask to save unsaved annotation when closing a pdf file
+
+2020-07-07 Tue
+
+Added creation of highlight, squiggly, strikeout and underline
+annotations.
+
+Replaced EnginePdf::IsLinearizedFile() with mupdf's pdf_doc_was_linearized.
+It didn't exist when IsLinearizedFile() was written.
+Removing code feels good.
+
+2020-07-06 Mon
+
+Fixed a bunch of issues related to bugs in freetype and not
+compiling Sumatra with the exact same freetype options as mupdf.
+Introduced when I updated freetype code.
+
+Removed .smx support. It's a lot of work to add support for all
+PDF annotations (for each annotation type need to write code
+to serialize it, de-serialize it, draw the annotation for
+each engine type).
+It's also sumatra-only and I suppose the majority of people
+just want PDF annotations.
+Might resurrect if there's a lot of requests for it.
+
+2020-07-05 Sun
+
+Link to the commit on pre-release and daily build pages.
+
+Fixed a long-standing issue of loosing list of opened files
+if Sumatra crashes or get killed by Windows (e.g. due to restart).
+Took so long to fix becaue I believed the code is correct.
+Turns out prefs::Save() was haphzardly used. It's still
+not great but at least this specific error is fixed.
+To be even more robust we should periodically (every 5 min?)
+call prefs::Save(). We only do it after opening and closing a file,
+which means that if we scroll etc., we'll loose this info.
+
+Coding style refactorings: change enum SettingType to enum class,
+change SerializeStruct() and SerializeGlobalPrefs() to return std::span<u8>.
+
+Fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/1661
+Another example of broken PDF that can be better handled if we
+relax parsing of PDF (cmap).
+
+Fixed https://github.com/sumatrapdfreader/sumatrapdf/issues/651
+Managing focus is tricky.
+
+2020-07-04 Sat
+
+Improving WStr the same way as Str, while we're in this area.
+
+make ByteWriter manage it's own buffer. In retrospect it's
+better API than passing a buffer.
+
+2020-07-03 Fri
+
+De-templetizing WStr implementation. Currently it's a subclass
+of Vec<WCHAR>.
+Yes, duplication of code is bad but so are templates.
+Reading code where you see T instead of WCHAR is significantly
+worse.
+The more stuff there is in .h files, the more code uses
+templates, the longer are compilation times.
+Templated code must be in .h file. 
+While I can't fix long compilation times, I can try to keep
+them as fast as possible.
+Also an opportunity to make the API smaller.
+
+Optimized str::Str on 64-bit by changing type of len/cap from
+size_t to u32.
+
+---
+
+Optimizing Str. Turns out that after de-templatizing the code
+became easier to understand and opportunities for optimizations
+turn up.
+The optimizations are pretty nasty (re-using the same memory for
+more than one purpse) but worth doing for such a fundamental type.
+
+2020-06-29 Mon
+
+- adding comments to Commands.h
+- website: add 'Spread the word' section
+- refactor: use DirIter in EngineImageDir::LoadImageDir()
+

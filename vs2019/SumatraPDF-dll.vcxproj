@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x32_asan|Win32">
+      <Configuration>Debug x32_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x32_asan|x64">
+      <Configuration>Debug x32_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x64_asan|Win32">
+      <Configuration>Debug x64_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x64_asan|x64">
+      <Configuration>Debug x64_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x64_ramicro|Win32">
+      <Configuration>Debug x64_ramicro</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x64_ramicro|x64">
+      <Configuration>Debug x64_ramicro</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x32_asan|Win32">
+      <Configuration>Release x32_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x32_asan|x64">
+      <Configuration>Release x32_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64_asan|Win32">
+      <Configuration>Release x64_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64_asan|x64">
+      <Configuration>Release x64_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64_ramicro|Win32">
+      <Configuration>Release x64_ramicro</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64_ramicro|x64">
+      <Configuration>Release x64_ramicro</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze|Win32">
+      <Configuration>ReleaseAnalyze</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze|x64">
+      <Configuration>ReleaseAnalyze</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x32_asan|Win32">
+      <Configuration>ReleaseAnalyze x32_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x32_asan|x64">
+      <Configuration>ReleaseAnalyze x32_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x64_asan|Win32">
+      <Configuration>ReleaseAnalyze x64_asan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x64_asan|x64">
+      <Configuration>ReleaseAnalyze x64_asan</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x64_ramicro|Win32">
+      <Configuration>ReleaseAnalyze x64_ramicro</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseAnalyze x64_ramicro|x64">
+      <Configuration>ReleaseAnalyze x64_ramicro</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A50E6CD3-91DC-5FD9-7A70-D0FF66DD3B3E}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SumatraPDF-dll</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x32_asan|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_asan|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_ramicro|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x32_asan|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_asan|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_ramicro|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x32_asan|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_asan|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_ramicro|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug x32_asan|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug x64_asan|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug x64_ramicro|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release x32_asan|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release x64_asan|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release x64_ramicro|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x32_asan|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_asan|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_ramicro|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\out\dbg32\</OutDir>
+    <IntDir>..\out\dbg32\obj\x32\Debug\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x32_asan|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\out\dbg32_asan\</OutDir>
+    <IntDir>..\out\dbg32_asan\obj\x32_asan\Debug\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\out\dbg64\</OutDir>
+    <IntDir>..\out\dbg64\obj\x64\Debug\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_asan|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\out\dbg64_asan\</OutDir>
+    <IntDir>..\out\dbg64_asan\obj\x64_asan\Debug\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_ramicro|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\out\dbg64ra\</OutDir>
+    <IntDir>..\out\dbg64ra\obj\x64_ramicro\Debug\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel32\</OutDir>
+    <IntDir>..\out\rel32\obj\x32\Release\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x32_asan|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel32_asan\</OutDir>
+    <IntDir>..\out\rel32_asan\obj\x32_asan\Release\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel64\</OutDir>
+    <IntDir>..\out\rel64\obj\x64\Release\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_asan|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\re64_asan\</OutDir>
+    <IntDir>..\out\re64_asan\obj\x64_asan\Release\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_ramicro|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel64ra\</OutDir>
+    <IntDir>..\out\rel64ra\obj\x64_ramicro\Release\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel32_prefast\</OutDir>
+    <IntDir>..\out\rel32_prefast\obj\x32\ReleaseAnalyze\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x32_asan|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel32_prefast_asan\</OutDir>
+    <IntDir>..\out\rel32_prefast_asan\obj\x32_asan\ReleaseAnalyze\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel64_prefast\</OutDir>
+    <IntDir>..\out\rel64_prefast\obj\x64\ReleaseAnalyze\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_asan|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel64_prefast_asan\</OutDir>
+    <IntDir>..\out\rel64_prefast_asan\obj\x64_asan\ReleaseAnalyze\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_ramicro|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\out\rel64ra_prefast\</OutDir>
+    <IntDir>..\out\rel64ra_prefast\obj\x64_ramicro\ReleaseAnalyze\SumatraPDF-dll\</IntDir>
+    <TargetName>SumatraPDF-dll</TargetName>
+    <TargetExt>.exe</TargetExt>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;INSTALL_PAYLOAD_ZIP=.\../out/dbg32\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/dbg32 &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x32_asan|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/dbg32_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/dbg32_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/dbg64\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/dbg64 &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_asan|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/dbg64_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/dbg64_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64_ramicro|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;DEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/dbg64ra\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/dbg64ra &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;INSTALL_PAYLOAD_ZIP=.\../out/rel32\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel32 &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release x32_asan|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/rel32_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel32_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/rel64\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel64 &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_asan|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/re64_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/re64_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release x64_ramicro|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/rel64ra\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel64ra &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;28125;28252;28253;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/analyze %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;INSTALL_PAYLOAD_ZIP=.\../out/rel32_prefast\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel32_prefast &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x32_asan|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;28125;28252;28253;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address /analyze %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/rel32_prefast_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel32_prefast_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;28125;28252;28253;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/analyze %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/rel64_prefast\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel64_prefast &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_asan|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;28125;28252;28253;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/fsanitize=address /analyze %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ASAN_BUILD=1;RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;RAMICRO;_WIN64;INSTALL_PAYLOAD_ZIP=.\../out/rel64_prefast_asan\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel64_prefast_asan &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseAnalyze x64_ramicro|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DisableSpecificWarnings>4127;4189;4324;4458;4522;4611;4800;6319;28125;28252;28253;4100;4244;4267;4702;4706;4302;4311;4838;4505;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/analyze %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>RAMICRO;WIN32;_WIN32;WINVER=0x0605;_WIN32_WINNT=0x0603;NDEBUG;_CRT_SECURE_NO_WARNINGS;DISABLE_DOCUMENT_RESTRICTIONS;_WIN64;RAMICRO;INSTALL_PAYLOAD_ZIP=.\../out/rel64ra_prefast\InstallerData.dat;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\src;..\mupdf\include;..\ext\WDL;..\ext\zlib;..\ext\synctex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;gdiplus.lib;msimg32.lib;shlwapi.lib;urlmon.lib;version.lib;wininet.lib;d2d1.lib;uiautomationcore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>WinMainCRTStartup</EntryPointSymbol>
+      <GenerateMapFile>true</GenerateMapFile>
+      <AdditionalOptions>/DELAYLOAD:libmupdf.dll /DELAYLOAD:gdiplus.dll /DELAYLOAD:msimg32.dll /DELAYLOAD:shlwapi.dll /DELAYLOAD:urlmon.dll /DELAYLOAD:version.dll /DELAYLOAD:wininet.dll /DELAYLOAD:uiautomationcore.dll %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>cd ../out/rel64ra_prefast &amp; ..\..\bin\MakeLZSA.exe InstallerData.dat libmupdf.dll:libmupdf.dll PdfFilter.dll:PdfFilter.dll PdfPreview.dll:PdfPreview.dll</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Accelerators.h" />
+    <ClInclude Include="..\src\Actions.h" />
+    <ClInclude Include="..\src\AppColors.h" />
+    <ClInclude Include="..\src\AppPrefs.h" />
+    <ClInclude Include="..\src\AppTools.h" />
+    <ClInclude Include="..\src\AppUtil.h" />
+    <ClInclude Include="..\src\Canvas.h" />
+    <ClInclude Include="..\src\Caption.h" />
+    <ClInclude Include="..\src\ChmModel.h" />
+    <ClInclude Include="..\src\Commands.h" />
+    <ClInclude Include="..\src\CrashHandler.h" />
+    <ClInclude Include="..\src\DisplayMode.h" />
+    <ClInclude Include="..\src\DisplayModel.h" />
+    <ClInclude Include="..\src\Doc.h" />
+    <ClInclude Include="..\src\EbookController.h" />
+    <ClInclude Include="..\src\EbookControls.h" />
+    <ClInclude Include="..\src\EditAnnotations.h" />
+    <ClInclude Include="..\src\ExternalViewers.h" />
+    <ClInclude Include="..\src\Favorites.h" />
+    <ClInclude Include="..\src\FileHistory.h" />
+    <ClInclude Include="..\src\FileThumbnails.h" />
+    <ClInclude Include="..\src\Flags.h" />
+    <ClInclude Include="..\src\GetDocumentOutlines.h" />
+    <ClInclude Include="..\src\GlobalPrefs.h" />
+    <ClInclude Include="..\src\Installer.h" />
+    <ClInclude Include="..\src\Menu.h" />
+    <ClInclude Include="..\src\MuiEbookPageDef.h" />
+    <ClInclude Include="..\src\Notifications.h" />
+    <ClInclude Include="..\src\PagesLayoutDef.h" />
+    <ClInclude Include="..\src\ParseBKM.h" />
+    <ClInclude Include="..\src\PdfSync.h" />
+    <ClInclude Include="..\src\Print.h" />
+    <ClInclude Include="..\src\ProgressUpdateUI.h" />
+    <ClInclude Include="..\src\RenderCache.h" />
+    <ClInclude Include="..\src\SaveAsPdf.h" />
+    <ClInclude Include="..\src\SearchAndDDE.h" />
+    <ClInclude Include="..\src\Selection.h" />
+    <ClInclude Include="..\src\SettingsStructs.h" />
+    <ClInclude Include="..\src\StressTesting.h" />
+    <ClInclude Include="..\src\SumatraAbout.h" />
+    <ClInclude Include="..\src\SumatraDialogs.h" />
+    <ClInclude Include="..\src\SumatraPDF.h" />
+    <ClInclude Include="..\src\SumatraProperties.h" />
+    <ClInclude Include="..\src\SvgIcons.h" />
+    <ClInclude Include="..\src\TabInfo.h" />
+    <ClInclude Include="..\src\TableOfContents.h" />
+    <ClInclude Include="..\src\Tabs.h" />
+    <ClInclude Include="..\src\TextSearch.h" />
+    <ClInclude Include="..\src\TextSelection.h" />
+    <ClInclude Include="..\src\Theme.h" />
+    <ClInclude Include="..\src\TocEditTitle.h" />
+    <ClInclude Include="..\src\TocEditor.h" />
+    <ClInclude Include="..\src\Toolbar.h" />
+    <ClInclude Include="..\src\Translations.h" />
+    <ClInclude Include="..\src\Version.h" />
+    <ClInclude Include="..\src\WindowInfo.h" />
+    <ClInclude Include="..\src\mui\Mui.h" />
+    <ClInclude Include="..\src\mui\MuiBase.h" />
+    <ClInclude Include="..\src\mui\MuiButton.h" />
+    <ClInclude Include="..\src\mui\MuiControl.h" />
+    <ClInclude Include="..\src\mui\MuiCss.h" />
+    <ClInclude Include="..\src\mui\MuiDefs.h" />
+    <ClInclude Include="..\src\mui\MuiEventMgr.h" />
+    <ClInclude Include="..\src\mui\MuiFromText.h" />
+    <ClInclude Include="..\src\mui\MuiGrid.h" />
+    <ClInclude Include="..\src\mui\MuiHwndWrapper.h" />
+    <ClInclude Include="..\src\mui\MuiLayout.h" />
+    <ClInclude Include="..\src\mui\MuiPainter.h" />
+    <ClInclude Include="..\src\mui\MuiScrollBar.h" />
+    <ClInclude Include="..\src\mui\SvgPath.h" />
+    <ClInclude Include="..\src\mui\TextRender.h" />
+    <ClInclude Include="..\src\resource.h" />
+    <ClInclude Include="..\src\testcode\test-app.h" />
+    <ClInclude Include="..\src\uia\DocumentProvider.h" />
+    <ClInclude Include="..\src\uia\PageProvider.h" />
+    <ClInclude Include="..\src\uia\Provider.h" />
+    <ClInclude Include="..\src\uia\StartPageProvider.h" />
+    <ClInclude Include="..\src\uia\TextRange.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ext\synctex\synctex_parser.c" />
+    <ClCompile Include="..\ext\synctex\synctex_parser_utils.c" />
+    <ClCompile Include="..\src\Accelerators.cpp" />
+    <ClCompile Include="..\src\Actions.cpp" />
+    <ClCompile Include="..\src\AppColors.cpp" />
+    <ClCompile Include="..\src\AppPrefs.cpp" />
+    <ClCompile Include="..\src\AppTools.cpp" />
+    <ClCompile Include="..\src\AppUtil.cpp" />
+    <ClCompile Include="..\src\Canvas.cpp" />
+    <ClCompile Include="..\src\CanvasAboutUI.cpp" />
+    <ClCompile Include="..\src\Caption.cpp" />
+    <ClCompile Include="..\src\ChmModel.cpp" />
+    <ClCompile Include="..\src\CrashHandler.cpp" />
+    <ClCompile Include="..\src\DisplayMode.cpp" />
+    <ClCompile Include="..\src\DisplayModel.cpp" />
+    <ClCompile Include="..\src\Doc.cpp" />
+    <ClCompile Include="..\src\EbookController.cpp" />
+    <ClCompile Include="..\src\EbookControls.cpp" />
+    <ClCompile Include="..\src\EditAnnotations.cpp" />
+    <ClCompile Include="..\src\ExternalViewers.cpp" />
+    <ClCompile Include="..\src\Favorites.cpp" />
+    <ClCompile Include="..\src\FileHistory.cpp" />
+    <ClCompile Include="..\src\FileThumbnails.cpp" />
+    <ClCompile Include="..\src\Flags.cpp" />
+    <ClCompile Include="..\src\GetDocumentOutlines.cpp" />
+    <ClCompile Include="..\src\GlobalPrefs.cpp" />
+    <ClCompile Include="..\src\InstUninstCommon.cpp" />
+    <ClCompile Include="..\src\Installer.cpp" />
+    <ClCompile Include="..\src\MemLeakDetect.cpp" />
+    <ClCompile Include="..\src\Menu.cpp" />
+    <ClCompile Include="..\src\MuPDF_Exports.cpp" />
+    <ClCompile Include="..\src\MuiEbookPageDef.cpp" />
+    <ClCompile Include="..\src\Notifications.cpp" />
+    <ClCompile Include="..\src\PagesLayoutDef.cpp" />
+    <ClCompile Include="..\src\ParseBKM.cpp" />
+    <ClCompile Include="..\src\PdfSync.cpp" />
+    <ClCompile Include="..\src\Print.cpp" />
+    <ClCompile Include="..\src\RenderCache.cpp" />
+    <ClCompile Include="..\src\SaveAsPdf.cpp" />
+    <ClCompile Include="..\src\SearchAndDDE.cpp" />
+    <ClCompile Include="..\src\Selection.cpp" />
+    <ClCompile Include="..\src\StressTesting.cpp" />
+    <ClCompile Include="..\src\SumatraAbout.cpp" />
+    <ClCompile Include="..\src\SumatraConfig.cpp" />
+    <ClCompile Include="..\src\SumatraDialogs.cpp" />
+    <ClCompile Include="..\src\SumatraPDF.cpp" />
+    <ClCompile Include="..\src\SumatraProperties.cpp" />
+    <ClCompile Include="..\src\SumatraStartup.cpp" />
+    <ClCompile Include="..\src\SvgIcons.cpp" />
+    <ClCompile Include="..\src\TabInfo.cpp" />
+    <ClCompile Include="..\src\TableOfContents.cpp" />
+    <ClCompile Include="..\src\Tabs.cpp" />
+    <ClCompile Include="..\src\Tester.cpp" />
+    <ClCompile Include="..\src\Tests.cpp" />
+    <ClCompile Include="..\src\TextSearch.cpp" />
+    <ClCompile Include="..\src\TextSelection.cpp" />
+    <ClCompile Include="..\src\Theme.cpp" />
+    <ClCompile Include="..\src\TocEditTitle.cpp" />
+    <ClCompile Include="..\src\TocEditor.cpp" />
+    <ClCompile Include="..\src\Toolbar.cpp" />
+    <ClCompile Include="..\src\Trans_sumatra_txt.cpp" />
+    <ClCompile Include="..\src\Translations.cpp" />
+    <ClCompile Include="..\src\Uninstaller.cpp" />
+    <ClCompile Include="..\src\WindowInfo.cpp" />
+    <ClCompile Include="..\src\mui\Mui.cpp" />
+    <ClCompile Include="..\src\mui\MuiBase.cpp" />
+    <ClCompile Include="..\src\mui\MuiButton.cpp" />
+    <ClCompile Include="..\src\mui\MuiControl.cpp" />
+    <ClCompile Include="..\src\mui\MuiCss.cpp" />
+    <ClCompile Include="..\src\mui\MuiDefs.cpp" />
+    <ClCompile Include="..\src\mui\MuiEventMgr.cpp" />
+    <ClCompile Include="..\src\mui\MuiFromText.cpp" />
+    <ClCompile Include="..\src\mui\MuiGrid.cpp" />
+    <ClCompile Include="..\src\mui\MuiHwndWrapper.cpp" />
+    <ClCompile Include="..\src\mui\MuiLayout.cpp" />
+    <ClCompile Include="..\src\mui\MuiPainter.cpp" />
+    <ClCompile Include="..\src\mui\MuiScrollBar.cpp" />
+    <ClCompile Include="..\src\mui\SvgPath.cpp" />
+    <ClCompile Include="..\src\mui\TextRender.cpp" />
+    <ClCompile Include="..\src\regress\Regress.cpp" />
+    <ClCompile Include="..\src\testcode\TestApp.cpp" />
+    <ClCompile Include="..\src\testcode\TestLayout.cpp" />
+    <ClCompile Include="..\src\testcode\TestLice.cpp" />
+    <ClCompile Include="..\src\testcode\TestTab.cpp" />
+    <ClCompile Include="..\src\uia\DocumentProvider.cpp" />
+    <ClCompile Include="..\src\uia\PageProvider.cpp" />
+    <ClCompile Include="..\src\uia\Provider.cpp" />
+    <ClCompile Include="..\src\uia\StartPageProvider.cpp" />
+    <ClCompile Include="..\src\uia\TextRange.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\log.txt" />
+    <None Include="..\src\todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\SumatraPDF.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libmupdf.vcxproj">
+      <Project>{B812ACA6-A4DF-06B2-CDF8-F459B9243C40}</Project>
+    </ProjectReference>
+    <ProjectReference Include="unrar.vcxproj">
+      <Project>{AD768210-198B-AAC1-E20C-4E214EE0A6F2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="unarrlib.vcxproj">
+      <Project>{C45AE373-B027-3E7F-D940-2C27C56C730D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="utils.vcxproj">
+      <Project>{169C8510-82B0-ADC1-4B32-5121B705AAF2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="engines.vcxproj">
+      <Project>{CE5B946A-3A3B-1306-4353-9EDCAFB17967}</Project>
+    </ProjectReference>
+    <ProjectReference Include="wdl.vcxproj">
+      <Project>{6CBA880B-D8C3-887C-613F-9F7CCD47947C}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
