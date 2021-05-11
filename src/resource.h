@@ -12,7 +12,7 @@
 #define IDD_DIALOG_CHANGE_LANGUAGE      134
 #define IDD_DIALOG_NEW_VERSION          135
 #define IDD_DIALOG_SETTINGS             136
-#define IDD_DIALOG_FIND                 137 
+#define IDD_DIALOG_FIND                 137
 #define IDD_DIALOG_CUSTOM_ZOOM          138
 #define IDD_PROPSHEET_PRINT_ADVANCED    139
 #define IDD_DIALOG_FAV_ADD              140
@@ -51,6 +51,7 @@
 #define IDC_FIND_EDIT                   1032
 #define IDC_MATCH_CASE                  1033
 #define IDC_FIND_NEXT_HINT              1034
+#define IDC_TOGGLEDARKMODE              1035
 #define IDC_SECTION_INVERSESEARCH       1040
 #define IDC_CMDLINE_LABEL               1041
 #define IDC_CMDLINE                     1042

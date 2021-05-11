@@ -1,5 +1,34 @@
 ![](https://github.com/sumatrapdfreader/sumatrapdf/workflows/Build/badge.svg)
 
+## Custom SumatraPDF Reader
+The original software contains annotation bad colors. This customised version has new pretty colors from Microsoft Edge PDF Reader and also includes a moon-star button on the toolbar which will toggle Dark Mode.
+
+based version: [sumatrapdfreader/sumatrapdf@ad91707](https://github.com/sumatrapdfreader/sumatrapdf/commit/ad9170712fdf0bfb3dca808dcb155c05d7364f56)
+
+## add ToggleDarkMode
+
+1. add a new macro `#define IDC_TOGGLEDARKMODE  1035` in `.\src\resource.h`
+
+2. add toolbar svg icon in `.\src\SvgIcons.cpp` and `.\src\Toolbar.cpp`
+
+3. add function in `.\src\SumatraPDF.cpp`
+
+ref: [ImmutableGlitch/SumatraPDF_Custom: Modified version of SumatraPDF](https://github.com/ImmutableGlitch/SumatraPDF_Custom)
+
+![DarkMode](.\DarkMode.png)
+
+## new pretty colors from Microsoft Edge PDF Reader
+
+edit 3 files below:
+
+`.\src\gl-annotate.c` and `.\mupdf\platform\gl\gl-annotate.c`
+
+`.\src\EditAnnotations.cpp`
+
+<video src=".\AnnotationColors.mp4"></video>
+
+------
+
 ## SumatraPDF Reader
 
 SumatraPDF is a multi-format (PDF, EPUB, MOBI, FB2, CHM, XPS, DjVu) reader
@@ -40,5 +69,5 @@ In Visual Studio, this is in  `Debugging`, `Environment` section.
 Note:
 * as of VS 16.6.2 `ASAN_OPTIONS=detect_leaks=1` (i.e. memory leaks) doesn't work.
   Unix version relies on tcmalloc so this might never work
-Suppressing issues: https://clang.llvm.org/docs/AddressSanitizer.html#issue-suppression
-Note: I couldn't get suppressing to work.
+  Suppressing issues: https://clang.llvm.org/docs/AddressSanitizer.html#issue-suppression
+  Note: I couldn't get suppressing to work.

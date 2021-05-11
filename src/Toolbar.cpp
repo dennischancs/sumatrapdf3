@@ -75,6 +75,7 @@ static ToolbarButtonInfo gToolbarButtons[] = {
     {8, CmdFindPrev, _TRN("Find Previous"), 0},
     {9, CmdFindNext, _TRN("Find Next"), 0},
     {10, CmdFindMatch, _TRN("Match Case"), 0},
+    {15, IDC_TOGGLEDARKMODE, _TRN("Toggle Dark Mode"), 0}, // 序号15, 参考SvgIcons.cpp中的排序 0-15 共16个图标
 };
 
 #define TOOLBAR_BUTTONS_COUNT dimof(gToolbarButtons)

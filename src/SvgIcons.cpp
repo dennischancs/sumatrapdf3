@@ -141,23 +141,33 @@ static const char* gIconRotateRight =
   <circle cx="11" cy="19.94" r="0.15"/>
 </svg>)";
 
+// https://github.com/tabler/tabler-icons/blob/master/icons/moon-stars.svg
+static const char* gIconToggleDarkMode =
+    R"(<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+  <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+  <path d="M19 11h2m-1 -1v2" />
+</svg>)";
+
 // clang-format off
 static const char* gAllIcons[] = {
-    gIconFileOpen,
-    gIconPrint,
-    gIconPagePrev,
-    gIconPageNext,
-    gIconLayoutContinuous,
-    gIconLayoutSinglePage,
-    gIconZoomOut,
-    gIconZoomIn,
-    gIconSearchPrev,
-    gIconSearchNext,
-    gIconMatchCase,
-    gIconMatchCase,  // TODO: remove this, is for compatiblity with bitmap icons
-    gIconSave,
-    gIconRotateLeft,
-    gIconRotateRight,
+    gIconFileOpen,  // 1
+    gIconPrint, // 2
+    gIconPagePrev, // 3
+    gIconPageNext, // 4
+    gIconLayoutContinuous, // 5
+    gIconLayoutSinglePage, // 6
+    gIconZoomOut, // 7
+    gIconZoomIn, // 8
+    gIconSearchPrev, // 9
+    gIconSearchNext, // 10
+    gIconMatchCase, // 11
+    gIconMatchCase, // 11 // TODO: remove this, is for compatiblity with bitmap icons
+    gIconSave, // 12
+    gIconRotateLeft, // 13
+    gIconRotateRight, // 14
+    gIconToggleDarkMode, // 15
 };
 // clang-format on
 
